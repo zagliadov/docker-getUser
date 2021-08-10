@@ -1,0 +1,12 @@
+version: '3'
+services:
+  front:
+    build: ./front
+    ports:
+      - '3000:3000'
+  server:
+    build: ./server
+    ports:
+      - '9001:9001'
+    volumes: 
+      - ./front/src:/src

@@ -1,0 +1,30 @@
+
+.makeChangesForm
+    display: flex
+    padding-top: 20px
+    padding-bottom: 20px
+.basic, .address
+    width: 50%
+    padding: 5px
+    &:hover .FormElementTitle
+        border-bottom: 1px solid #7271713f
+        width: 100%
+        transition: 0.3s
+
+.FormElementTitle
+    width: 30%
+    font-size: 24px
+    transition: 0.3s
+    padding: 10px
+    border-bottom: 1px solid #7271713f
+
+.changeButton
+    margin-top: 10px
+    width: 100%
+
+
+@media screen and (max-width: 800px)
+    .makeChangesForm
+        flex-direction: column
+    .basic, .address
+        width: 100%
