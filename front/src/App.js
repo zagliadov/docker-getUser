@@ -1,13 +1,11 @@
 import React from 'react';
+import Cars from './components/Cars/Cars';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { Users } from './components/Users';
-import { Main } from './components/Main';
-import { User } from './components/User/User';
 
 
 
@@ -16,12 +14,11 @@ export const App = () => {
   return (
     <div className="container">
       <Router>
-      <Main />
         <Switch>
-          <Route path='/users' exact>
-            <Users />
+          <Route path='/cars' exact>
+              <Cars />
           </Route>
-          <Route path='/users/:id' component={User} />
+          {/* <Route path='/cars/:id' component={Cars} /> */}
         </Switch>
 
       </Router>

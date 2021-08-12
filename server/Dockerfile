@@ -1,6 +1,6 @@
 FROM node:12.2.0
 # Create app directory
-# WORKDIR /app
+WORKDIR /app
 # Install app dependencies
 COPY package*.json ./
 
