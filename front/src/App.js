@@ -1,8 +1,12 @@
 import React from 'react';
-import Cars from './components/Cars/Cars';
-
+import Home from './components/Home/Home';
+import Registration from './components/Auth/Registration/Registration';
+import Login from './components/Auth/Login/Login';
+import Container from './components/Container/Container';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
@@ -12,17 +16,16 @@ import {
 export const App = () => {
 
   return (
-    <div className="container">
-      <Router>
-        <Switch>
-          <Route path='/cars' exact>
-              <Cars />
-          </Route>
-          {/* <Route path='/cars/:id' component={Cars} /> */}
-        </Switch>
+    <BrowserRouter>
+      <Header />
+      <Footer />
+      <Switch>
+        <Route path='/' component={Container} exact/>
+        <Route path='/registration' component={Registration} />
+        <Route path='/login' component={Login} />
+      </Switch>
+    </BrowserRouter>
 
-      </Router>
-    </div>
   );
 }
 

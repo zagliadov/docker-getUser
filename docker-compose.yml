@@ -1,22 +1,30 @@
 version: '3'
 services:
   front:
-    build: ./front
+    image: user_front
+    container_name: frontend
+    working_dir: /app
     ports:
       - '3000:3000'
     depends_on:
       - server
       - carFactoryDB
+    command: npm start
     volumes:
-      - ./front/src:/app/src
+      # - ./front/node_modules:/app/node_modules
+      - ./front:/app
   server:
-    build: ./server
+    image: node:latest
+    container_name: server
     ports:
       - '9001:9001'
     depends_on:
       - carFactoryDB
+    working_dir: /app
     volumes:
       - ./server:/app
+    command: npm run start:dev
+    
   carFactoryDB:
     image: postgres:latest
     environment: 

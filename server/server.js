@@ -8,6 +8,7 @@ app.use(express.json())
 
 
 app.use('/api/cars', require('./routes/cars.js'));
+app.use('/api/auth', require('./routes/auth.js'))
 
 
 app.listen(PORT, (req, res) => {
