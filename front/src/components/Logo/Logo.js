@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import classes from './logo.module.sass';
+import styled from 'styled-components'
+
+const MyLink = styled(Link)`
+    display: flex;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 25px;
+`;
 
 
 const Logo = () => {
     return (
-            <h1>
-               <Link to='/' className={classes.link}>Logo</Link> 
-            </h1>
+        <MyLink to='/'>Logo</MyLink> 
     );
 };
 

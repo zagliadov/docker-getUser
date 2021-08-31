@@ -1,12 +1,17 @@
 import React from 'react';
-import classes from './main.module.sass';
+import styled from 'styled-components';
 
+const ContentWrapper = styled.main`
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 90px; 
+`;
 
 const Main = () => {
     return (
-        <div className={classes.content}>
+        <ContentWrapper>
             MAIN
-        </div>
+        </ContentWrapper>
     );
 };
 
